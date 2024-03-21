@@ -11,11 +11,9 @@
 
   import { Toaster } from 'svelte-french-toast';
 
-  // //   '0xe1eA3EdDC4c5EdAa52d4db5568F3DAfF6286747b'
 </script>
 
 <main>
-  <Screen />
   <TopBar />
   <Search />
   {#if $spinnerStore.spinner}
