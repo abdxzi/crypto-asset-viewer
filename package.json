@@ -1,0 +1,22 @@
+{
+  "name": "crypto-asset-viewer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "svelte": "^4.2.8",
+    "svelte-loading-spinners": "^0.3.4",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "alchemy-sdk": "^3.2.0",
+    "ethers": "^6.11.1",
+    "svelte-french-toast": "^1.2.0"
+  }
+}
