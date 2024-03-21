@@ -1,5 +1,4 @@
 <script>
-  import Screen from "@utils/Screen.svelte";
   import TopBar from "@components/TopBar.svelte";
   import Search from "@components/Search.svelte";
   import TokenTable from "@components/TokenTable.svelte";
