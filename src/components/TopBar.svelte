@@ -1,8 +1,10 @@
 <script>
-    import { connectWallet } from "@utils/CryptoFcns";
+    import { connectWallet, shortenAddress } from "@utils/CryptoFcns";
     import { dataStore, spinnerStore } from "@utils/store";
 
     import toast from "svelte-french-toast";
+
+    let _address = null;
 
     const handleClick = async () => {
         let addr = null;
@@ -16,6 +18,9 @@
             $dataStore = {
                 address: addr,
             };
+
+            _address = addr;
+
         } catch (e) {
             toast.error(e);
         }
@@ -24,7 +29,7 @@
 
 <div class="topbar">
     <h2>Crypto Asset Viewer</h2>
-    <button on:click={handleClick}>Connect wallet</button>
+    <button on:click={handleClick}>{_address == null ? 'Connect wallet': `${shortenAddress(_address)}`}</button>
     <p>OR</p>
 </div>
 

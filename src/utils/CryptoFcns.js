@@ -2,8 +2,7 @@ import { Alchemy, Network, Utils } from 'alchemy-sdk';
 import { ethers } from 'ethers';
 
 const config = {
-    apiKey: "hx8ZsJ6IWJrIgswpPGnnqtskxDGPEqdn",
-    // apiKey: import.meta.env.VITE_APIKEY,
+    apiKey: import.meta.env.VITE_APIKEY,
     network: Network.ETH_MAINNET,
 };
 
@@ -91,7 +90,9 @@ async function connectWallet() {
     }
 }
 
-export { getTokenBalances, getTokenMetadata, hexToEther, getNFTsOf, isValidETHAddress,connectWallet, resolveENS, isENSName};
+const shortenAddress = (address) => `${address?.slice(0, 4)}..${address?.slice(address.length - 3)}`;
+
+export { getTokenBalances, getTokenMetadata, hexToEther, getNFTsOf, isValidETHAddress,connectWallet, resolveENS, isENSName, shortenAddress};
 
 
 
